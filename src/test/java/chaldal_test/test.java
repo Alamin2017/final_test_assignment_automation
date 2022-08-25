@@ -84,8 +84,8 @@ public class test {
 		ta.press(PointOption.point(start_x, start_y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1))).moveTo(PointOption.point(end_x, end_y)).release().perform();
 		Thread.sleep(2000); 
 
-		//	Colgate Gentle Sensitive Toothbrush	
-		driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Colgate Gentle Sensitive Toothbrush\")")).click();
+		//	Dabur Red Toothpaste (Free Toothbrush)	
+		driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Dabur Red Toothpaste (Free Toothbrush)\")")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.className("android.view.ViewGroup")).click();
 		//		
