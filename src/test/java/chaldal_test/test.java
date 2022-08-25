@@ -21,7 +21,7 @@ import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class test {
-	
+
 	public static AppiumDriver driver;
 
 	@BeforeTest
@@ -63,22 +63,16 @@ public class test {
 
 		//	Search Products using keyboard
 		driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Search Products\")")).sendKeys("toothbrush");
-	
+
 		driver.navigate().back();
 		Thread.sleep(3000);
-		
-		
 
 
-		//	Dabur Red Toothpaste (Free Toothbrush)
-		//driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Dabur Red Toothpaste (Free Toothbrush)\")")).click();
-		//Thread.sleep(3000);
-		//driver.findElement(By.className("android.view.ViewGroup")).click();
 		Thread.sleep(3000);
-		
+
 		//Create an object of android  actions class
 		AndroidTouchAction ta=new AndroidTouchAction(driver);
-		
+
 		Dimension dimension=driver.manage().window().getSize();
 
 		int start_x=(int) (dimension.width)/2;
@@ -89,15 +83,15 @@ public class test {
 
 		ta.press(PointOption.point(start_x, start_y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1))).moveTo(PointOption.point(end_x, end_y)).release().perform();
 		Thread.sleep(2000); 
-		
-//		Dabur Red Toothpaste (Free Toothbrush)
-			driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Colgate Gentle Sensitive Toothbrush\")")).click();
-			Thread.sleep(3000);
-			driver.findElement(By.className("android.view.ViewGroup")).click();
-//		
-		
-		
-		
+
+		//	Colgate Gentle Sensitive Toothbrush	
+		driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Colgate Gentle Sensitive Toothbrush\")")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.className("android.view.ViewGroup")).click();
+		//		
+
+
+
 
 		// click on + button for increasing items
 		Thread.sleep(1000);
@@ -124,22 +118,22 @@ public class test {
 		Thread.sleep(3000);
 
 		// click on + button for decreasing items
-		
+
 		Thread.sleep(1000);
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup").click();
-       //close 
+		//close 
 		Thread.sleep(1000);
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup").click();
-       //close 
+		//close 
 		Thread.sleep(1000);
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup").click();
-       //close 
+		//close 
 		Thread.sleep(3000);
 		//print Nothing to see here
 		Thread.sleep(2000);
 		System.out.println("Verifying Text: "+driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Nothing to see here\")")).getText());
 		//driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Nothing to see here\")")).getText();
-		
+
 
 
 
