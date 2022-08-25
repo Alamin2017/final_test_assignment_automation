@@ -120,7 +120,7 @@ public class test {
 
 		Thread.sleep(3000);
 
-		driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"৳326\")")).click();
+		driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"৳254\")")).click();
 		Thread.sleep(3000);
 
 		// click on + button for decreasing items
